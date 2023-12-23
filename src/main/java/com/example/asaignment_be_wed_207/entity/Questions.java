@@ -45,14 +45,5 @@ public class Questions {
     @JoinColumn(name = "id_subject")
     private Subject subject;
 
-    @ManyToMany(fetch = FetchType.EAGER , cascade ={
-            CascadeType.DETACH, CascadeType.MERGE ,
-            CascadeType.REFRESH , CascadeType.PERSIST
-    })
-    @JoinTable(
-            name = "user_question",
-            joinColumns = @JoinColumn(name = "id_question"),
-            inverseJoinColumns = @JoinColumn(name = "id_user")
-    )
-    private List<Users> listUsers;
+
 }

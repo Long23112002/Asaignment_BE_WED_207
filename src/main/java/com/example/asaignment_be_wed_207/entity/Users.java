@@ -56,10 +56,10 @@ public class Users {
             CascadeType.REFRESH , CascadeType.PERSIST
     })
     @JoinTable(
-            name = "user_question",
+            name = "user_subject",
             joinColumns = @JoinColumn(name = "id_user"),
-            inverseJoinColumns = @JoinColumn(name = "id_question")
+            inverseJoinColumns = @JoinColumn(name = "id_subject")
     )
-    private List<Questions> listQuestion;
+    private List<Subject> listQuestion;
 
 }
